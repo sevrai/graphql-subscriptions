@@ -1,6 +1,6 @@
-export type FilterFn<TSource = any, TArgs = any, TContext = any> = (rootValue?: TSource, args?: TArgs, context?: TContext, info?: any) => boolean | Promise<boolean>;
-export type ResolverFn<TSource = any, TArgs = any, TContext = any, TResolve = any> = (rootValue?: TSource, args?: TArgs, context?: TContext, info?: any) => AsyncIterator<TResolve> | Promise<AsyncIterator<TResolve>>;
-export type IterableResolverFn<TSource = any, TArgs = any, TContext = any> = (rootValue?: TSource, args?: TArgs, context?: TContext, info?: any) => AsyncIterableIterator<any> | Promise<AsyncIterableIterator<any>>;
+export type FilterFn<TSource = any, TArgs = any, TContext = any> = (rootValue: TSource, args: TArgs, context: TContext, info?: any) => boolean | Promise<boolean>;
+export type ResolverFn<TSource = any, TArgs = any, TContext = any, TResolve = any> = (rootValue: TSource, args: TArgs, context: TContext, info?: any) => AsyncIterator<TResolve> | Promise<AsyncIterator<TResolve>>;
+export type IterableResolverFn<TSource = any, TArgs = any, TContext = any> = (rootValue: TSource, args: TArgs, context: TContext, info?: any) => AsyncIterableIterator<any> | Promise<AsyncIterableIterator<any>>;
 
 interface IterallAsyncIterator<T> extends AsyncIterableIterator<T> {
   [Symbol.asyncIterator](): IterallAsyncIterator<T>;
